@@ -287,7 +287,7 @@ textarea.input{
     75%, 100% {
         background-image: url(../images/banner4.jpg);
     }
-}
+}   
 
 .capa {
     width: 100%;
@@ -295,7 +295,7 @@ textarea.input{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .info {
