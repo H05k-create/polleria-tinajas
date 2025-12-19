@@ -256,11 +256,6 @@ textarea.input{
 /* dfdfdfdfsfd*/
 
 
-
-
-
-
-
 .banner {
     width: 100%;
     height: 800px;
@@ -346,11 +341,11 @@ textarea.input{
 
 /*  CARDS STYLE */
 
-h2 {
+.recomendation {
     text-align: center;
     margin-top: 50px;
     font-size: 2.5rem;
-    color: #333;
+    color: #0095ff;
 }
 .flips{
     display: flex;
@@ -444,8 +439,11 @@ h2 {
 
 /* NOSOTROS STYLE*/
 
-.container {
+/* .container {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 .section_2 {
@@ -482,42 +480,116 @@ h2 {
 }
 
 
-/* REDES SOCIALES - SOBRE NOSOTROS */
+/* ===== SOBRE NOSOTROS - BASE (Mobile First) ===== */
+.section_2 {
+  width: 90%;
+  max-width: 1200px;
+  padding: 60px 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-.us-rs{
-    margin: 20px 0;
+.section_2-tittle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: brown;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.us {
+  display: flex;
+  flex-direction: column; /* Móvil: columna */
+  gap: 30px;
+}
+
+.us-text {
+  width: 100%;
+}
+
+.us-paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #505050;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.paragraph-text {
+  margin: 12px 0;
+}
+
+/* Redes sociales */
+.us-rs {
+  margin: 25px 0 15px;
 }
 
 .us-rs-tittle {
-    font-family: lato;
-    font-size: 20px;
-    color: brown;
-    font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: brown;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
+
 .rs-icon {
-    margin: 10px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.rs-link img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s;
+}
+
+.rs-link img:hover {
+  transform: scale(1.1);
+}
+
+/* Imagen */
+.us-img {
+  width: 100%;
+}
+
+.img-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
 }
 
 
-.rs-link{
-    margin: 0 10px;
+/* ===== TABLET & DESKTOP: 2 COLUMNAS ===== */
+@media (min-width: 768px) {
+  .section_2-tittle {
+    font-size: 36px;
+    text-align: left;
+  }
 
-}
+  .us {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
 
-.us-img{
+  .us-text {
+    width: 60%;
+  }
+
+  .us-img {
     width: 40%;
+  }
+
+  .rs-icon {
+    justify-content: flex-start;
+  }
 }
-
-.img-img{
-    object-fit: cover;
-    width: 100%;
-    border-radius: 5px;
-
-}
-
-
-
-
 
 
 
@@ -573,6 +645,7 @@ header {
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -633,24 +706,6 @@ header {
 }
 
 
-
-/* HERO MI REY */
-/* 
-section#hero {
-    height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-}
-
-#hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-} */
-
 /* RESPOSIVE DESIGN MI KING GAAAAAAA */
 
 @media(max-width: 992px){
@@ -676,4 +731,239 @@ section#hero {
         left: 2rem;
         width: unset;
     }
+}
+
+
+
+
+
+/* RESPONSIVE BANNER MOVIL */
+@media(width <= 768px){
+    .info h1{
+        font-size: 28px;
+    }
+    .info p{
+        font-size: 16px;
+    }
+    .info a{
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+    .recomendation{
+        font-size: 24px;
+    }
+}
+
+/* RESPONSIVE DESIGN TARJETAS MOVIL */
+
+@media(width <= 576px){
+    .flips{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .horario-banner{
+        font-size: 16px;
+    }
+    .navbar .logo a{
+        font-size: 16px;
+    }
+    .section_2{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+footer {
+    display: grid;
+    justify-content: end;
+    align-content: end;
+    min-height: 100vh;
+    background: #e8e8e8;
+    padding: 50px;
+    
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #fff;
+}
+
+footer .container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+footer .container .sec h2{
+    position: relative;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+footer .container .sec p{
+    color: #555;
+}
+
+footer .container .sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+}
+
+footer .container .sci li{
+    list-style: none;
+}
+
+footer .container .sci li a{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #333;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+footer .container .sci li a i{
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .container .quicklinks{
+    position: relative;
+}
+
+footer .container .quicklinks ul li{
+    list-style: none;
+    
+}
+
+
+footer .container .quicklinks ul li a {
+    color: #555;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+
+
+}
+
+footer .container .contact .infos{
+    position: relative; 
+}
+footer .container .contact .infos li{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+
+footer .container .contact .infos li span{
+    color: #555;
+    font-size: 20px;
+}
+footer .container .contact .infos li a{
+    color: #555;
+    text-decoration: none;
+}
+
+
+.copyrightText{
+    width: 100%;
+    background: #fff;
+    padding: 20px 100px 30px;
+    text-align: center;
+    color: #555;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* RESPONSIVE DESIGN FOOTER */
+
+@media(max-width: 900px){
+    footer{
+       padding: 40px;
+    }
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}   
+
+
+@media(max-width: 500px){
+    footer{
+       padding: 40px;
+    }
+    footer .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}   
+
+
+
+
+
+
+
+
+
+
+
+/* SOBRE NOSOTROS*/ 
+
+.horario-banner {
+  background: #ff9900;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.horario-banner i {
+  margin-right: 0.5rem;
+}
+
+
+/* Botón Volver Arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 80px;      /* Por encima del botón de WhatsApp */
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

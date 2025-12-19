@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>TINAJAS - SAC</title>
+
         <!-- Style of the plugin -->
      <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/index.js">
 </head>
 <body>
     <header>
@@ -25,8 +27,7 @@
 <a href="https://wa.me/51999888777?text=Hola%2C%20quisiera%20hacer%20un%20pedido%20de%3A%0A%0A✅%20Pollo%20entero%20%2B%20papas%20fritas%20%2B%20ensalada%0A✅%20Medio%20pollo%20%2B%20bebida%20natural%0A✅%20Combo%20Generoso%20Online%0A%0APor%20favor%2C%20dame%20los%20precios%20y%20tiempo%20de%20entrega.%0A%0AGracias%21" 
    target="_blank" 
    class="action_btn">
-  <span>📲 Pedir por WhatsApp</span>
-  <span class="emoji">🍗</span>
+  <span>Ver Más</span>
 </a>
 
 
@@ -48,13 +49,15 @@
     <div class="banner">
         <div class="capa"></div>
         <div class="info">
-            <h1>Bienvenidos a TINAJAS - SAC</h1>
+            <h1 id="inicios">Bienvenidos a TINAJAS - SAC</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, esse ex quae eius expedita ipsam nihil maxime quidem sint rerum?</p>
             <a href="#">Ver Menu</a>
         </div>
     </div>
 
-    <h2>LA RECOMENDACIÓN DE LA CASA</h2>
+    <h2 class="recomendation" >LA RECOMENDACIÓN DE LA CASA</h2>
+
+
 <div class="flips">
 
     <div class="card">
@@ -122,11 +125,20 @@
 
 
 <!-- SOBRE NOSOTROS  -->
+
+
+<div class="horario-banner">
+  <i class="fa-solid fa-clock"></i>
+  <span>Horario de atención: Lunes a Domingo 7:00 AM - 10:30 PM</span>
+</div>
+
+
+
 <section class="container section_2">
     <h3 class="section_2-tittle">Sobre Nosotros</h3>
     <div class="us">
         <div class="us-text">
-            <div class="us-paragraph">
+            <div class="us-paragraph">  
                 <p class="paragraph-text">
                     Somos una empresa dedicada a la venta de pollos a la brasa, con más de 10 años de experiencia en el mercado. Nuestro objetivo es brindar a nuestros clientes productos de alta calidad, preparados con los mejores ingredientes y siguiendo estrictos estándares de higiene y seguridad alimentaria.
                 </p>
@@ -221,6 +233,87 @@
     });
 </script>
 
+<footer>
+    <div class="container">
+        <div class="sec aboutus">
+            <h2>About Us</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, sint a nemo eum dolores quibusdam nisi sed cumque facilis eius fuga, eaque esse tenetur, numquam debitis asperiores officia enim quo!</p>
+            <ul class="sci">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Support</h2>
+            <ul>
+                <li><a href="#">FAG</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="sec quicklinks">
+            <h2>Shop</h2>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Shoes</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contact</h2>
+            <ul class="infos">
+                <li>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <p><a href="#">+51 925 149 861</a></p>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <p><a href="#">luiscarrascohuarcaya00@gmail.com</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<!-- <div class="arrow-top">
+<a href="#inicios"><img src="../images/arrow.png" alt=""></a>
+</div> -->
+
+<!-- Botón Volver Arriba -->
+<button id="backToTop" class="back-to-top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+
+<div class="copyrightText">
+    <p>Copyright © 2024 TINAJAS - SAC | All Rights Reserved</p>
+</div>
+
+
+<script>
+  const backToTopButton = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
 
 
 </body>
